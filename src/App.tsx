@@ -1,11 +1,17 @@
-import { useState } from 'react'
 import './App.css'
 import { Header } from './components/header'
 import { TodoList } from './components/todoList';
 import { AddTodo } from './components/addTodo';
+import { useLocalStorage } from './hooks/useLocalStorage';
+
+interface Todo {
+  id: number;
+  text: string;
+  done: boolean;
+}
 
 function App() {
-  const [todos, setTodos] = useState<{ id: number; text: string; done: boolean}[]>([]);
+  const [todos, setTodos] = useLocalStorage<Todo[]>("todos", []);
 
   const handleAdd = (text: string) => {
     const newTodo = {
