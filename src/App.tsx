@@ -1,7 +1,7 @@
 import './App.css'
 import { Header } from './components/header'
-import { TodoList } from './components/todoList';
-import { AddTodo } from './components/addTodo';
+import { TodoList } from './components/TodoList';
+import { AddTodo } from './components/AddTodo';
 import { useLocalStorage } from './hooks/useLocalStorage';
 
 interface Todo {
