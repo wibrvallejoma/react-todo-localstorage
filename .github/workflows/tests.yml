@@ -17,6 +17,9 @@ jobs:
       
       - name: Install dependencies
         run: bun install
+      
+      - name: Set NODE_PATH
+        run: echo "NODE_PATH=./src" >> $GITHUB_ENV
 
       - name: Run tests
         run: bun run test
