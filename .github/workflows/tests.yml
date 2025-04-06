@@ -20,8 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set NODE_PATH
-        run: echo "NODE_PATH=./src" >> $GITHUB_ENV
-
       - name: Run tests
         run: npm run test
