@@ -1,4 +1,4 @@
-import { TodoList } from "@/components/TodoList";
+import { TodoList } from "./TodoList";
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 
