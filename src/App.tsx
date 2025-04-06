@@ -1,5 +1,4 @@
 import './App.css'
-import { Header } from './components/header'
 import { TodoList } from './components/TodoList';
 import { AddTodo } from './components/AddTodo';
 import { useLocalStorage } from './hooks/useLocalStorage';
@@ -35,11 +34,13 @@ function App() {
   }
 
   return (
-    <>
-      <Header title="To-do App" />
+    <div className="flex-row justify-items-center h-full">
+      <div className="flex gap-6">
+        <h1 className="text-3xl font-bold underline">ToDo App</h1>
+      </div>
       <AddTodo onAdd={handleAdd} />
       <TodoList todos={todos} onToggle={handleToggle} onDelete={handleDelete} />
-    </>
+    </div>
   )
 }
 

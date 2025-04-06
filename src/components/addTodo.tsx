@@ -18,15 +18,15 @@ export function AddTodo({ onAdd }: Props) {
   }
 
   return (
-    <div className="flex flex-row gap-2">
-      <form onSubmit={handleSubmit}>
+    <div className="w-96 m-4">
+      <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
           type="text"
           placeholder="Add new todo..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <Button type="submit">Add</Button>
+        <Button type="submit" className="relative overflow-hidden before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] before:duration-1000">Add</Button>
       </form>
     </div>
   )
