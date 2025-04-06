@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { AddTodo } from './AddTodo';
+import { AddTodo } from '@/components/AddTodo';
 import { describe, expect, it, vi } from 'vitest';
 
 describe('AddTodo', () => {
